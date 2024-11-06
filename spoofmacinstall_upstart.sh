@@ -19,7 +19,7 @@ chmod +x "$SCRIPT_PATH"
 echo "Creating Upstart service at $SERVICE_PATH"
 cat <<EOF > "$SERVICE_PATH"
 description "spoofs mac address on startup"
-start on network-services
+start on started network-services
 task
 
 script
